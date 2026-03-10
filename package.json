@@ -1,0 +1,17 @@
+{
+    "name": "ai-fashion-app",
+    "version": "1.0.0",
+    "description": "Unified Frontend and Backend for AI Fashion",
+    "main": "backend/server.js",
+    "scripts": {
+        "start": "node backend/server.js",
+        "dev:backend": "cd backend && npm run dev",
+        "dev:frontend": "cd frontend && npm run dev",
+        "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+        "build": "cd frontend && npm run build && cd ../backend && npm install",
+        "install:all": "cd backend && npm install && cd ../frontend && npm install"
+    },
+    "dependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
